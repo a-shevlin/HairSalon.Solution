@@ -1,0 +1,38 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+
+<div class="jumbotron">
+  <h2>Add Client</h2>
+</div>
+<div class="container">
+  <h4>Add a new client</h4>
+  @if (ViewBag.StylistCount == 0)
+  {
+    <p>Client can not be made if there are no stylists.</p>
+    <p>Please add a stylist.</p>
+    <p>@Html.ActionLink("Add a new Stylist", "Create", "Stylists")</p>
+  }
+  else
+  {
+    @using (Html.BeginForm())
+    {
+      @Html.LabelFor(model => model.Name)
+      @Html.TextBoxFor(model => model.Name)
+      <br>@Html.LabelFor(model => model.PhoneNumber)
+      @Html.TextBoxFor(model => model.PhoneNumber)
+      <br>@Html.LabelFor(model => model.Pronoun)
+      @Html.TextBoxFor(model => model.Pronoun)
+      <br>@Html.LabelFor(model => model.Email)
+      @Html.TextBoxFor(model => model.Email)
+      <br>@Html.LabelFor(model => model.Stylist)
+      @Html.DropDownList("StylistId")
+      <br><input type="submit" value="Add Client" class="btn-md" />
+    }
+
+    <p>@Html.ActionLink("Show all Clients", "Index", "Clients")</p>
+  }
+  
+</div>
