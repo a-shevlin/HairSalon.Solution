@@ -12,8 +12,9 @@
   {
     <h4>No Stylists have been added</h4>
   }
-  
-  <table>
+  else
+  {
+    <table>
     <tr>
       <th>Stylist</th>
       <th>Stylist Hire Date</th>
@@ -26,6 +27,8 @@
       </tr>
     }
   </table>
+  }
+  
   <p>@Html.ActionLink("Add a new Stylist", "Create", "Stylists")</p>
   <p>@Html.ActionLink("Add a new Client", "Create", "Clients")</p>
   <p>@Html.ActionLink("Home", "Index", "Home")</p>
