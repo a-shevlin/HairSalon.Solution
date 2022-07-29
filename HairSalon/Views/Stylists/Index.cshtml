@@ -26,16 +26,7 @@
       </tr>
     }
   </table>
-  <br> @using (Html.BeginForm("Create", "Stylists", FormMethod.Get))
-  {
-    <input type="submit" value="Add a new Stylist" class="btn-md">
-  }
-  <br> @using (Html.BeginForm("Create", "Clients", FormMethod.Get))
-  {
-    <input type="submit" value="Add a new Client" class="btn-md">
-  }
-  <br> @using (Html.BeginForm("Index", "Home", FormMethod.Get))
-  {
-    <input type="submit" value="Home" class="btn-md">
-  }
+  <p>@Html.ActionLink("Add a new Stylist", "Create", "Stylists")</p>
+  <p>@Html.ActionLink("Add a new Client", "Create", "Clients")</p>
+  <p>@Html.ActionLink("Home", "Index", "Home")</p>
 </div>

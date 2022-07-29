@@ -7,8 +7,5 @@
 </div>
 <div class="container">
   <p>@Html.ActionLink("See All Stylists", "Index", "Stylists")</p>
-  <br>@using (Html.BeginForm("Index", "Clients", FormMethod.Get))
-  {
-    <input type="submit" value="See All Clients" class="btn-md">
-  }
+  <p>@Html.ActionLink("See All Clients", "Index", "Clients")</p>
 </div>
