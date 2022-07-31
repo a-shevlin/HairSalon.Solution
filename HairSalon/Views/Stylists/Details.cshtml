@@ -11,18 +11,29 @@
   <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
   <h4>@Html.DisplayNameFor(model => model.DateHired): @Html.DisplayFor(model => model.DateHired)</h4>
   @{int count = 0;}
+  <table id="sTable" class="table table-responsive-md table-hover">
+      <thead>
+        <tr>
+          <th>Client</th>
+          <th>Pronouns</th>
+        </tr>
+      </thead>
   @foreach (var client in @ViewBag.stylistClients)
   {
     @if (client.StylistId == Model.StylistId)
     {
-    <p>@client.Name</p>
+    <tr>
+      <td>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</td>
+      <td>@client.Pronoun</td>
+    </tr>
     count++;
     }
   }
+  </table>
   @if (count == 0)
-  {
-    <p>This stylist has no clients.</p>    
-  }
+    {
+      <p>This stylist has no clients.</p>    
+    }
   <p>@Html.ActionLink("Add More Clients", "Create", "Clients")</p>
   <br>
   <p>@Html.ActionLink("Back to Stylists", "Index")</p>

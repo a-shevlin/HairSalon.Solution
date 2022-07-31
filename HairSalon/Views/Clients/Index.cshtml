@@ -18,18 +18,14 @@
     <table>
     <tr>
       <th>Client</th>
-      <th>Client Phone Number</th>
-      <th>Client Pronouns</th>
-      <th>Client Email</th>
+      <th>Pronouns</th>
       <th>Current Stylist</th>
     </tr>
     @foreach (Client client in Model)
     {
       <tr>
         <td>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })</td> 
-        <td>@client.PhoneNumber</td>
         <td>@client.Pronoun</td>
-        <td>@client.Email</td>
         <td>@client.Stylist.Name </td>
       </tr>
     }

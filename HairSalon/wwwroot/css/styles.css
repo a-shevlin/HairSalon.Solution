@@ -1,7 +1,7 @@
-#sTable {
-  max-width: 400px;
-  border: 1px solid gray;
-  border-top: 2px solid gray;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+h2{
+  font-family: 'Pacifico', cursive;
 }
 
 a {
@@ -12,8 +12,34 @@ a:hover {
   text-decoration: none;
 }
 
+.jumbotron {
+  height: max-content;
+  background: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#salonName {
+  text-align: center;
+  color: goldenrod;
+  font-size: 50px;
+  text-shadow: 2px 0px rgb(125, 112, 63);
+}
+
+.jumbotron h4 {
+  text-align: center;
+  padding-left: 60px;
+}
+
+
+#sTable {
+  max-width: 400px;
+  border: 1px solid gray;
+  border-top: 2px solid gray;
+}
+
 .htmlButton {
-  background-color: azure;
+  background-color: lightgoldenrodyellow;
   border: 1px solid gray;
   border-radius: 3px;
   margin: 4px;
