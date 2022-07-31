@@ -8,8 +8,8 @@
   <h2>Stylist Details</h2>
 </div>
 <div class="container">
-  <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-  <h4>@Html.DisplayNameFor(model => model.DateHired): @Html.DisplayFor(model => model.DateHired)</h4>
+  <h3>Stylist: @Html.DisplayFor(model => model.Name)</h3>
+  <h4>Date Hired: @Html.DisplayFor(model => model.DateHired)</h4>
   @{int count = 0;}
   <table id="sTable" class="table table-responsive-md table-hover">
       <thead>
@@ -34,10 +34,13 @@
     {
       <p>This stylist has no clients.</p>    
     }
-  <p>@Html.ActionLink("Add More Clients", "Create", "Clients")</p>
-  <br>
-  <p>@Html.ActionLink("Back to Stylists", "Index")</p>
-  <p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
-  <p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
+  <div class="buttonCenter">
+    @Html.ActionLink("Add Client", "Create", "Clients", null, new { @class="htmlButton" })
+    <br>
+    <br>
+    @Html.ActionLink("To Stylists", "Index", "Stylists",null, new { @class="htmlButton" })
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StylistId }, new { @class="htmlButton"})
+    @Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId }, new { @class="htmlButton"})
+  </div>
   
 </div> 

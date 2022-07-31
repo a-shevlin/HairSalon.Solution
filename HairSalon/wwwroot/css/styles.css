@@ -1,47 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+body {
+  height: 100vh;
+  background: linear-gradient(-45deg, #F4D6CC, #C83E4D);
+  background-size: 300%;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  color: #32373B;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+}
+
 h2{
   font-family: 'Pacifico', cursive;
 }
 
 a {
-  color: black;
+  color: #32373B;
 }
 
 a:hover {
+  color: #F4B860;
   text-decoration: none;
 }
 
 .jumbotron {
   height: max-content;
+  text-align: center;
   background: none;
-  padding-top: 20px;
+  padding-top: 70px;
   padding-bottom: 20px;
 }
 
-#salonName {
-  text-align: center;
-  color: goldenrod;
+.jumbotron h2 {
+  color: #F4B860;
   font-size: 50px;
   text-shadow: 2px 0px rgb(125, 112, 63);
 }
 
 .jumbotron h4 {
+  font-size: 20px;
+}
+
+.container {
   text-align: center;
-  padding-left: 60px;
 }
 
 
 #sTable {
   max-width: 400px;
-  border: 1px solid gray;
-  border-top: 2px solid gray;
+  background-color: #c83e4e5b;
+  border: 1px solid #4A5859;
+  border-top: 2px solid #4A5859;
+  margin: 0px auto;
+  margin-bottom: 20px;
+}
+
+#sTable th {
+  color: #F4D6CC;
+}
+
+#sTable td {
+  color: #32373B;
+}
+
+.buttonCenter {
+  text-align: center;
 }
 
 .htmlButton {
-  background-color: lightgoldenrodyellow;
-  border: 1px solid gray;
-  border-radius: 3px;
+  background-color: #F4D6CC;
+  border: 1px solid #4A5859;
+  border-radius: 4px;
   margin: 4px;
   padding: 3px;
   width: max-content;
