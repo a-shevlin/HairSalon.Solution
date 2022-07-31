@@ -8,12 +8,13 @@
   <h2>Client Details</h2>
 </div>
 <div class="container">
-  <h4>Name: @Html.DisplayFor(model => model.Name)</h4>
-  <h6>Phone Number: @Html.DisplayFor(model => model.PhoneNumber)</h6>
-  <h6>Pronouns: @Html.DisplayFor(model => model.Pronoun)</h6>
-  <h6>Email: @Html.DisplayFor(model => model.Email)</h6>
-  <h6>Current Stylist: @Html.ActionLink($"{ViewBag.currentStylist.Name}", "Details", "Stylists", new { id = ViewBag.currentStylist.StylistId })</h6>
-
+  <div id="clientCard">
+    <h4>Name: @Html.DisplayFor(model => model.Name)</h4>
+    <h6>Phone Number: @Html.DisplayFor(model => model.PhoneNumber)</h6>
+    <h6>Pronouns: @Html.DisplayFor(model => model.Pronoun)</h6>
+    <h6>Email: @Html.DisplayFor(model => model.Email)</h6>
+    <h6>Current Stylist: @Html.ActionLink($"{ViewBag.currentStylist.Name}", "Details", "Stylists", new { id = ViewBag.currentStylist.StylistId })</h6>
+  </div>
 
   <div class="buttonCenter">
     @Html.ActionLink("Back to Clients", "Index", "Clients", null, new { @class="htmlButton"})

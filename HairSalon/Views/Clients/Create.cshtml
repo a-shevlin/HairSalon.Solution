@@ -29,10 +29,10 @@
       @Html.TextBoxFor(model => model.Email)
       <br>@Html.LabelFor(model => model.Stylist)
       @Html.DropDownList("StylistId")
-      <br><input type="submit" value="Add Client" class="btn-md" />
+      <br><input type="submit" value="Add Client" class="htmlButton" />
     }
-
-    <p>@Html.ActionLink("Show all Clients", "Index", "Clients")</p>
   }
-  
+  <br>
+  <br>
+  @Html.ActionLink("Client List", "Index", "Clients", null, new { @class="htmlButton"})
 </div>

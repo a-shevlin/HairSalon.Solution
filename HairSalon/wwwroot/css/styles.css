@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&family=Pacifico&display=swap');
 
 body {
   height: 100vh;
@@ -8,6 +8,8 @@ body {
   background-repeat: no-repeat;
   animation: gradient 25s ease infinite;
   color: #32373B;
+  font-family: 'Monda', sans-serif;
+  font-weight: bolder;
 }
 
 @keyframes gradient {
@@ -66,13 +68,17 @@ a:hover {
 }
 
 
-#sTable {
+.sTable {
   max-width: 400px;
   background-color: #c83e4e5b;
   border: 1px solid #4A5859;
   border-top: 2px solid #4A5859;
   margin: 0px auto;
   margin-bottom: 20px;
+}
+
+#stable thead {
+  border-bottom: 1px solid #4A5859;
 }
 
 #sTable th {
@@ -89,10 +95,39 @@ a:hover {
 
 .htmlButton {
   background-color: #F4D6CC;
-  border: 1px solid #4A5859;
+  border: 3px groove #F4B860;
   border-radius: 4px;
   margin: 4px;
   padding: 3px;
   width: max-content;
   text-align: center;
+  box-shadow: 2px 5px #89595f;
+}
+
+.htmlButton:hover {
+  color: #C83E4D;
+}
+
+.htmlButton:active {
+  box-shadow: 2px 2px #89595f;
+  transform: perspective(90%) translateZ(-1em);
+}
+
+#clientCard {
+  background-color: #F4B860;
+  background-size: 500%;
+  width: max-content;
+  border: 5px outset #F4B860;
+  padding: 5px;
+  margin: 0px auto;
+  box-shadow: 2px 1px rgb(125, 112, 63);
+  box-sizing: border-box;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#clientCard h4 {
+  font-size: 30px;
+  color: #F4D6CC;
+  text-shadow: 2px 1px rgb(125, 112, 63);
 }

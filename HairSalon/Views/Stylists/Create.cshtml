@@ -15,7 +15,9 @@
     @Html.LabelFor(model => model.DateHired)
     @Html.TextBoxFor(model => model.DateHired)
 
-    <input type="submit" value="Add a new Stylist" />
+    <input class="htmlButton" type="submit" value="Add a new Stylist" />
   }
-  <p>@Html.ActionLink("Show All Stylists", "Index", "Stylists")</p>
+  <br>
+  <br>
+  @Html.ActionLink("Stylist List", "Index", "Stylists", null, new { @class="htmlButton"})
 </div>

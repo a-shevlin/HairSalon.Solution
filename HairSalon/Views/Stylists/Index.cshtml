@@ -15,7 +15,7 @@
   }
   else
   {
-    <table id="sTable" class="table table-responsive-md table-hover">
+    <table class="sTable table table-responsive-md table-hover">
       <thead>
         <tr>
           <th>Stylist</th>
@@ -31,8 +31,12 @@
     }
   </table>
   }
-  
-  @Html.ActionLink("Add a new Stylist", "Create", "Stylists", null, new { @class="htmlButton"})
-  @Html.ActionLink("Add a new Client", "Create", "Clients", null, new { @class="htmlButton"})
-  @Html.ActionLink("Home", "Index", "Home", null, new { @class="htmlButton"})
+  <div class="buttonCenter">
+    @Html.ActionLink("Add a new Stylist", "Create", "Stylists", null, new { @class="htmlButton"})
+    @Html.ActionLink("Add a new Client", "Create", "Clients", null, new { @class="htmlButton"})
+    <br>
+    <br>
+    @Html.ActionLink("Client List", "Index", "Clients", null, new { @class="htmlButton" })
+    @Html.ActionLink("Home", "Index", "Home", null, new { @class="htmlButton"})
+  </div>  
 </div>

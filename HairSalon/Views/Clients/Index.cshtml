@@ -15,24 +15,27 @@
   }
   else
   {
-    <table>
-    <tr>
-      <th>Client</th>
-      <th>Pronouns</th>
-      <th>Current Stylist</th>
-    </tr>
+    <table class="sTable table table-responsive-md table-hover">
+      <thead>
+        <tr>
+          <th>Client</th>
+          <th>Pronouns</th>
+          <th>Current Stylist</th>
+        </tr>
+      </thead>
     @foreach (Client client in Model)
     {
       <tr>
         <td>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })</td> 
         <td>@client.Pronoun</td>
-        <td>@client.Stylist.Name </td>
+        <td>@Html.ActionLink($"{@client.Stylist.Name}", "Details", new {id = client.Stylist.StylistId })</td>
       </tr>
     }
   </table>
   }
-
-  <p>@Html.ActionLink("Add More Clients", "Create", "Clients")</p>
-  <p>@Html.ActionLink("Add More Stylists", "Create", "Stylists")</p>
-  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+  <div class="buttonCenter">
+    @Html.ActionLink("Add More Clients", "Create", "Clients", null, new { @class="htmlButton" })
+    @Html.ActionLink("Stylist List", "Index", "Stylists", null, new { @class="htmlButton" })
+    @Html.ActionLink("Home", "Index", "Home", null, new { @class="htmlButton" })
+  </div>
 </div>
