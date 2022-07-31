@@ -2,11 +2,24 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(-45deg, #F4D6CC, #C83E4D);
-  background-size: 300%;
+  background: linear-gradient(100deg, #C83E4D, #F4D6CC);
+  background-size: 500%;
   background-position: fixed;
   background-repeat: no-repeat;
+  animation: gradient 25s ease infinite;
   color: #32373B;
+}
+
+@keyframes gradient {
+  0% {
+		background-position: 20% 20%;
+	}
+	50% {
+		background-position: 70% 50%;
+	}
+	100% {
+		background-position: 20% 20%;
+	}
 }
 
 #footer {

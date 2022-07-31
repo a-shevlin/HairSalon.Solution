@@ -7,14 +7,19 @@
 <div class="jumbotron">
   <h2>Client Details</h2>
 </div>
-<div>
-  <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
-  <h4>@Html.DisplayNameFor(model => model.PhoneNumber): @Html.DisplayFor(model => model.PhoneNumber)</h4>
-  <h4>@Html.DisplayNameFor(model => model.Pronoun): @Html.DisplayFor(model => model.Pronoun)</h4>
-  <h4>@Html.DisplayNameFor(model => model.Email): @Html.DisplayFor(model => model.Email)</h4>
+<div class="container">
+  <h4>Name: @Html.DisplayFor(model => model.Name)</h4>
+  <h6>Phone Number: @Html.DisplayFor(model => model.PhoneNumber)</h6>
+  <h6>Pronouns: @Html.DisplayFor(model => model.Pronoun)</h6>
+  <h6>Email: @Html.DisplayFor(model => model.Email)</h6>
+  <h6>Current Stylist: @Html.ActionLink($"{ViewBag.currentStylist.Name}", "Details", "Stylists", new { id = ViewBag.currentStylist.StylistId })</h6>
 
-  <p>@Html.ActionLink("Back to Clients", "Index")</p>
 
-  <p>@Html.ActionLink("Edit Client Info", "Edit", new { id = Model.ClientId })</p>
-  <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
+  <div class="buttonCenter">
+    @Html.ActionLink("Back to Clients", "Index", "Clients", null, new { @class="htmlButton"})
+    <br>
+    <br>
+    @Html.ActionLink("Edit Client Info", "Edit", "Clients", new { id = Model.ClientId }, new { @class="htmlButton" })
+    @Html.ActionLink("Delete Client", "Delete", "Clients", new { id = Model.ClientId }, new { @class="htmlButton" })
+  </div>
 </div>
