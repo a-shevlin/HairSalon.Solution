@@ -1,0 +1,23 @@
+#sTable {
+  max-width: 400px;
+  border: 1px solid gray;
+  border-top: 2px solid gray;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.htmlButton {
+  background-color: azure;
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin: 4px;
+  padding: 3px;
+  width: max-content;
+  text-align: center;
+}

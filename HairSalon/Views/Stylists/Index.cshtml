@@ -14,11 +14,13 @@
   }
   else
   {
-    <table>
-    <tr>
-      <th>Stylist</th>
-      <th>Stylist Hire Date</th>
-    </tr>
+    <table id="sTable" class="table table-responsive-md table-hover">
+      <thead>
+        <tr>
+          <th>Stylist</th>
+          <th>Stylist Hire Date</th>
+        </tr>
+      </thead>
     @foreach (Stylist stylist in Model)
     {
       <tr>
@@ -29,7 +31,7 @@
   </table>
   }
   
-  <p>@Html.ActionLink("Add a new Stylist", "Create", "Stylists")</p>
-  <p>@Html.ActionLink("Add a new Client", "Create", "Clients")</p>
-  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+  @Html.ActionLink("Add a new Stylist", "Create", "Stylists", null, new { @class="htmlButton"})
+  @Html.ActionLink("Add a new Client", "Create", "Clients", null, new { @class="htmlButton"})
+  @Html.ActionLink("Home", "Index", "Home", null, new { @class="htmlButton"})
 </div>
